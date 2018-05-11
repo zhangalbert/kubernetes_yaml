@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: cadvisor
+  namespace: kube-ops
+spec:
+  type: NodePort
+  selector:
+    name: cadvisor
+  ports:
+  - name: http
+    port: 8080
+    nodePort: 31700
+    protocol: TCP
+  type: NodePort
