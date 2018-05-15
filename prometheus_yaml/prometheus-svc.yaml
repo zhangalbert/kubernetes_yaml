@@ -10,6 +10,11 @@ spec:
     k8s-app: prometheus
   type: NodePort
   ports:
-    - name: web
+    - name: http
       port: 9090
-      targetPort: http
+      nodePort: 30267
+      protocol: TCP
+    - name: alert
+      port: 9093
+      nodePort: 30277
+      protocol: TCP

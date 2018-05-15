@@ -37,7 +37,7 @@ spec:
             memory: 300Mi
           limits:
             cpu: 500m
-            memory: 2Gi
+            memory: 4Gi
       - image: registry.rubikstack.com/lichen/alertmanager:509
         name: alertmanager
         args:
@@ -46,7 +46,7 @@ spec:
         ports:
         - containerPort: 9093
           protocol: TCP
-          name: http
+          name: alert
         volumeMounts:
         - name: alertmanager-config-volume
           mountPath: /etc/alertmanager
