@@ -1,2 +1,2 @@
-# kubernete
-yaml
+# kubernetes
+yaml files
